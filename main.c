@@ -28,6 +28,10 @@ int main(){
         printf("%d\n", BIDORDLIST_consultation(l));
     }
 
+    BIDORDLIST_goStart(&l);
+    BIDORDLIST_delete(&l);
+
+
     BIDORDLIST_destroy(&l);
 
     return 0;
