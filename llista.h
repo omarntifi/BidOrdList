@@ -8,7 +8,10 @@
 *
 ***********************/
 
+#ifndef BID_ORD_LIST_LLISTA_H
+#define BID_ORD_LIST_LLISTA_H
 
+#endif //BID_ORD_LIST_LLISTA_H
 
 #include <stdio.h>
 #include <stdlib.h>
