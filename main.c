@@ -20,12 +20,12 @@ int main(){
     BidOrdList l;
 
     l = BidOrdList_create();
-    printf("%d\n", BIDORDLIST_consultation(l));
+    printf("%d\n", BIDORDLIST_consultation(l));                         //Shows if list is empty
     printf("1 if list is empty -> %d\n", BIDORDLIST_empty(l));
 
-    for(i=0; i < 10; i++){
+    for(i=0; i < 10; i++){                                              //Insert 10 numbers
         BIDORDLIST_insertOrdered(&l, i);
-        printf("%d\n", BIDORDLIST_consultation(l));
+        printf("%d\n", BIDORDLIST_consultation(l));                     //Shows list numbers
     }
 
     BIDORDLIST_goStart(&l);
