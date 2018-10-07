@@ -12,6 +12,7 @@
 #include <stdlib.h>
 
 
+
  BidOrdList BidOrdList_create(){
 
      BidOrdList l;
@@ -66,6 +67,8 @@
 
          aux->next = l->pdi->next;
          aux->prev = l->pdi;
+         l->pdi->next->prev = aux;
+         l->pdi->next = aux;
      }
 
  }
@@ -107,7 +110,7 @@
 
      int k = 0;
 
-     if(l.start->next == l.final) {
+     if(l.start->next==NULL && l.final->prev==NULL) {
          printf("Empty list\n");
      }
 
