@@ -21,19 +21,15 @@ int main(){
 
     l = BidOrdList_create();
     printf("%d\n", BIDORDLIST_consultation(l));
+    printf("1 if list is empty -> %d\n", BIDORDLIST_empty(l));
 
-    /*for(i=0; i < 10; i++){
+    for(i=0; i < 10; i++){
         BIDORDLIST_insertOrdered(&l, i);
-    }
-
-    //BIDORDLIST_goStart(&l);
-
-    while(!BIDORDLIST_final(l)){
         printf("%d\n", BIDORDLIST_consultation(l));
-        BIDORDLIST_advance(&l);
     }
 
-*/
+    BIDORDLIST_destroy(&l);
+
     return 0;
 
 }
