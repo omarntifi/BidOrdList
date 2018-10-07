@@ -7,10 +7,10 @@
 *
 ***********************/
 
-
+#include "llista.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "llista.h"
+
 
  BidOrdList BidOrdList_create(){
 

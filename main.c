@@ -14,23 +14,6 @@
 
 int main(){
 
-    int i;
-    BidOrdList l;
-
-    l = BidOrdList_create();
-
-    for(i=0; i < 10; i++){
-        BIDORDLIST_insertOrdered(&l, i);
-        printf("ok");
-    }
-
-    BIDORDLIST_goStart(&l);
-
-    while(!BIDORDLIST_final(l)){
-        printf("dentro");
-        printf("%d\n", BIDORDLIST_consultation(l));
-        BIDORDLIST_advance(&l);
-    }
 
 
     return 0;
