@@ -20,19 +20,20 @@ int main(){
     BidOrdList l;
 
     l = BidOrdList_create();
+    printf("%d\n", BIDORDLIST_consultation(l));
 
-    for(i=0; i < 10; i++){
+    /*for(i=0; i < 10; i++){
         BIDORDLIST_insertOrdered(&l, i);
     }
 
-    BIDORDLIST_goStart(&l);
+    //BIDORDLIST_goStart(&l);
 
     while(!BIDORDLIST_final(l)){
         printf("%d\n", BIDORDLIST_consultation(l));
         BIDORDLIST_advance(&l);
     }
 
-
+*/
     return 0;
 
 }
