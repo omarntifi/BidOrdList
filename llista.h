@@ -10,7 +10,8 @@
 
 
 
-#include <studio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct n {
     int i;
@@ -28,8 +29,6 @@ BidOrdList BidOrdList_create();
 
 void BIDORDLIST_insertOrdered(BidOrdList *l, int i);
 
-int BIDORDLIST_consultation(BidOrdList l);
-
 void BIDORDLIST_advance(BidOrdList *l);
 
 void BIDORDLIST_goBack(BidOrdList *l);
@@ -37,6 +36,8 @@ void BIDORDLIST_goBack(BidOrdList *l);
 void BIDORDLIST_goStart(BidOrdList *l);
 
 void BIDORDLIST_goFinal(BidOrdList *l);
+
+int BIDORDLIST_consultation(BidOrdList l);
 
 void BIDORDLIST_delete(BidOrdList *l);
 
