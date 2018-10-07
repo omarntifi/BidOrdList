@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <llista.h>
+#include "llista.h"
 
  BidOrdList BidOrdList_create(){
 
@@ -24,7 +24,7 @@
      }
 
      else{
-         l.final = (Node)*malloc(sizeof(Node));
+         l.final = (Node*)malloc(sizeof(Node));
 
          if (l.final == NULL){
              printf("Memory error!\n");
@@ -49,7 +49,7 @@
 
      Node *aux;
 
-     aux = (Node)*malloc(sizeof(Node));
+     aux = (Node*)malloc(sizeof(Node));
 
      if(aux == NULL){
          printf("Memory error!\n");
@@ -57,7 +57,7 @@
 
      else{
          aux->i = i;
-         l.pdi = l.start;
+         l->pdi = l->start;
 
          while (l->pdi->next != NULL && i > l->pdi->next->i){
 
@@ -66,6 +66,8 @@
 
          aux->next = l->pdi->next;
          aux->prev = l->pdi;
+         l->pdi->next->prev = aux;
+         l->pdi->next = aux;
      }
 
  }
@@ -112,7 +114,7 @@
      }
 
      else{
-         k = l.pdi->e;
+         k = l.pdi->i;
      }
      return k;
  }
@@ -148,7 +150,7 @@
 
      Node *aux;
 
-     aux = (Node)malloc(sizeof(Node));
+     aux = (Node*)malloc(sizeof(Node));
 
      if(aux == NULL) {
          printf("It has not been possible to destroy the list\n");
