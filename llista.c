@@ -109,7 +109,7 @@
 
      int k = 0;
 
-     if(l.start->next == l.final) {
+     if(l.start->next==NULL && l.final->prev==NULL) {
          printf("Empty list\n");
      }
 
